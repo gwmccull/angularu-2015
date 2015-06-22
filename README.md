@@ -168,3 +168,19 @@ These are my notes for the AngularU 2015 conference.
   - loss of authentication
   - values too short or too long
 - can use it to extend an incomplete API to add endpoints that haven't been built yet
+
+
+### Ward Bell & MEAN stack
+#### Node
+- run time server or client environment
+#### Express
+- server framework for Node
+- middleware
+  - middleware is a function
+  - 3 params: request, response, & do-next
+#### MongoDB
+- collection ~ Table
+- document ~ row
+- nested-documents = "view"
+- no joins = fast but requires thought on what to store.  Have to go back to the db for extra info if you need it
+- no transactions = scalable but info might not make it....
