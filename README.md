@@ -96,7 +96,7 @@ These are my notes for the AngularU 2015 conference.
 
 
 ### John Lindquist / Egghead.io / Angular 2 speedrun
-- [see speedrun on github](http://github.com/johnlindquist/speedrun)
+- [see speedrun on github](http://github.com/johnlindquist/speed-run)
 
 ### Scott Moss - ES6 now with Ng1.x
 #### Why?
@@ -134,3 +134,11 @@ These are my notes for the AngularU 2015 conference.
 - only works with Classes
 - must be written above the target
 
+### Doris Chen
+#### Edge
+- single codebase for all devices that scales fluidly
+- evergreen browser
+
+
+### David East
+- RX library for observables
