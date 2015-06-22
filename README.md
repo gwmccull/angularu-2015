@@ -54,8 +54,10 @@ These are my notes for the AngularU 2015 conference.
 #### Brad
 - Ng 1.5 will be about migration support
 - Animate will support timeline animations
+- 
+#### Q&A
 - Angular is building a CLI to help with scaffolding at beginning of project
 - Typescript makes refactoring easier
 - ng2 works seamlessly with web components
 - trying to build in more support to tell you when you forgot something
-- 
+- Misko - Module loading is built into ES6.  SystemJS handles most different ways of loading.  
