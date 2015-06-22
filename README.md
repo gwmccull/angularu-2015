@@ -9,14 +9,14 @@ These are my notes for the AngularU 2015 conference.
 - got swag bag
 - went to dinner at Greek restaurant
 
-## Monday
-### Keynote
-#### Brad Green
+## Monday  
+### Keynote  
+#### Brad Green  
 - Benchpress
   - Angular 2 is ~3x faster than Angular 1
   - Angular 2 is ~4x better with memory than A1
-  - 
-#### Igor
+
+#### Igor  
 - focusing on making things fast & smooth
 - Web workers
   - allows browser to process some things on a separate thread
@@ -41,12 +41,12 @@ These are my notes for the AngularU 2015 conference.
 - Server side
   - faster startup, SEO, Previews (previewing a deep link on FB for example)
 
-#### Brad
+#### Brad  
 - Languages
   - JS -> ES6 -> Types (Typescript) -> Decorators (Typescript or ES7)
   - all of NG2 has been converted to use new language stack
-  - 
-#### Misko
+
+#### Misko  
 - Ng2 is 1-way data binding by default
 - you can combine the ng-model data binding and event though for shortcut
   - `[(ng-model)] = "username"`
@@ -54,14 +54,13 @@ These are my notes for the AngularU 2015 conference.
 #### Brad
 - Ng 1.5 will be about migration support
 - Animate will support timeline animations
-- 
+
 #### Q&A
 - Angular is building a CLI to help with scaffolding at beginning of project
 - Typescript makes refactoring easier
 - ng2 works seamlessly with web components
 - trying to build in more support to tell you when you forgot something
 - Misko - Module loading is built into ES6.  SystemJS handles most different ways of loading.  
-
 
 ### John Papp and Dan Wahlin
 #### choosing a direction
@@ -94,5 +93,6 @@ These are my notes for the AngularU 2015 conference.
   - <tr *ng-for="box in boxes">
 - Components
   - new way to write directives
-  - 
+
+
   
