@@ -142,3 +142,29 @@ These are my notes for the AngularU 2015 conference.
 
 ### David East
 - RX library for observables
+
+### Tomomi Imura
+#### Shadow DOM
+- enables markup to be:
+  - modular
+  - encapsulated
+- only supported by Chrome & Opera (maybe Edge)
+  - there's a polyfill for other browsers
+- you see the tag you created in the element inspector but below it, you can see a shadow DOM that you can expand and see what's inside the custom element
+- Shadow DOM can be styled with CSS pseudo-selector/pseudo-elements
+
+### Yuri Takheyev & HackStack.js: AngularJS Applications Broken APIs Delivered Late
+- Hackstack is a method for working with a broken API delivered late
+  - set of best practices
+  - now there's a library also
+- involves server mockup
+- `bower install angular-hackstack`
+- `https://github.com/rangle/hackstack`
+- centralize your services into an api service that knows about the mocked services
+- allows you to mock likely problems
+  - slow connections
+  - server-side errors
+  - dropped connections
+  - loss of authentication
+  - values too short or too long
+- can use it to extend an incomplete API to add endpoints that haven't been built yet
