@@ -61,3 +61,38 @@ These are my notes for the AngularU 2015 conference.
 - ng2 works seamlessly with web components
 - trying to build in more support to tell you when you forgot something
 - Misko - Module loading is built into ES6.  SystemJS handles most different ways of loading.  
+
+
+### John Papp and Dan Wahlin
+#### choosing a direction
+- http://jpapa.me/ngstyles
+- ng2 styleguide will be out once the code has been out for a while
+- ES6 will help yoiu align with ng2
+- USE ng1.x with ES6 or Typescript for all new projects
+
+#### Typescript
+- interfaces in TypeScript help with defining the contract for a class
+- /// to inject type files at top of file
+  - you can define all of the type files in one file any where in the project
+  - type files are located centerally for libraries so you can download them
+    - definitelytyped.org
+
+#### Modules
+- use systemjs to load them
+
+#### Angular 2
+- [DOM property]
+  - <div [hidden]="isAvailable">asdf</di>
+  - <div bind-hidden="isAvailable">
+- (event)
+  - <div (click)="sort()">
+  - <div on-click="sort()">
+- [(ng-model)] bind to event & property
+  - bindon-property="model"
+  - two-way data binding - bind to both the property and the update (event) of the property
+- for loop
+  - <tr *ng-for="box in boxes">
+- Components
+  - new way to write directives
+  - 
+  
