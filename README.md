@@ -95,4 +95,42 @@ These are my notes for the AngularU 2015 conference.
   - new way to write directives
 
 
-  
+### John Lindquist / Egghead.io / Angular 2 speedrun
+- [see speedrun on github](http://github.com/johnlindquist/speedrun)
+
+### Scott Moss - ES6 now with Ng1.x
+#### Why?
+- it'll push things forward
+- use Babel (recommended)
+- SystemJS (module loader)  & JSPM (package manager)
+  - true universal dynamic module loader
+  - plugin system
+  - JSPM uses SystemJS
+- Webpack
+  - loads & bundles modules
+  - plugin system
+    - has stylist plugin
+    - easy setup w/ little config
+
+#### Classes for controllers
+- remember to bind things to this (if they're being passed in)
+
+#### Modules
+- cannot conditionally import things like you can with require
+- must be top of file
+- cannot use variables for source name
+
+#### Arrow Functions
+- be careful because unexpected side effects
+  - this is same as "outside"
+
+#### Object property & method shortcuts
+- some method shortcuts diverge from spec after compiler.  Watch out!
+
+`function({data}) { data.whatever() }`  get the data property from the object passed in
+
+#### Decorators
+- experimental - ES7 draft
+- only works with Classes
+- must be written above the target
+
