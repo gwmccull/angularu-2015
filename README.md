@@ -184,3 +184,79 @@ These are my notes for the AngularU 2015 conference.
 - nested-documents = "view"
 - no joins = fast but requires thought on what to store.  Have to go back to the db for extra info if you need it
 - no transactions = scalable but info might not make it....
+
+
+### Douglas Crockford & Upgrading the Web
+#### Web Security
+- no one is addressing security issues
+- passwords
+  - created once we had remote disks & timeshares
+  - both for data access and billing of processor time
+  - can't remember very many passwords so bad practices develop
+- what's wrong with the web?
+  - insecure - most insecurity arrives from the complexity
+  - complex
+  - web standards only adds new stuff, doesn't remove bugs that are already in it and can't reduce complexity
+- HTTP
+  - key : value pairs
+  - Negotiation - server/browser need to agree on formats of communication
+  - request/response protocol
+- DNS
+  - convenience so you don't have to type ip addresses
+  - not compatible with the Trademark system
+  - not trustworthy
+- SSL
+  - too complicated & doesn't work well
+  - relies on Certificate Authorities
+    - can't trust certificate authorities because they just give certificates to people that give them money
+    - many have been hacked
+- HTML
+  - terrible for many things (technical documents, SPAs, pretty much everything)
+  - inspires use of templates which Crockford hates
+    - templates allow injection attacks
+  - causes people to be stuck on HTML
+- DOM
+  - "worst api ever created"
+  - horrendously insecure, slow, etc
+- CSS
+  - 'crappy style sheets'
+- JavaScript
+  - 'hot mess'
+  - "there's a good language inside ECMAScript"
+  - get ride of everything else but keep JavaScript
+- many companies (MS, Adobe, Apple, etc) have tried creating a close-sourced option that is better than web stack
+  - but no transition
+- Upgrade the web
+  - keep the things it does well & throw out the bad
+- Modeled after HDTV
+  - originally there was NTSC but we decided to switch to digital
+  - cutoff date with the Super Bowl right after that so it'd better work!
+  - gov't gave out set top boxes to help the transition
+- Helper App (analog to set top boxes)
+  - plugin for browser that opens an application to display a file that browser can't handle
+- Transition plan
+  - convince one progressive browser to integrate the helper app
+  - convince one secure site to require its customers to use that browser
+  - Risk mitigation will compel the other sites to require that browser
+  - other browsers will then have to follow
+  - then the world will have to follow
+  - Nothing breaks!
+- no HTTP
+  - Secure JSON over TCP
+- everything will be strong crypto.  Only one password to remember and then they know it's you
+- url will be
+  - web : publickey @ ipaddress / capability
+  - web is the standard (like http)
+  - publickey is 105 digit ECC public key
+  - ipaddress is the ip address of server
+  - capability is an identifier supplied by the company
+- cooperation under mutual suspicion
+- everything is kept in a 'vat' (like a sandbox)
+- system has two parts
+  - JS Message Server (Node)
+  - Qt - front end framework
+  - Message server can use filer and network
+  - Qt can access the display
+  - separated concerns
+- keep doing what you're doing for now....
+  - this may be coming some day....
