@@ -53,3 +53,61 @@
 https://github.com/jacobscarter/angular-crazy-fast-prototyping/tree/Phase1
 - Ionic is good for fast prototypes
   - CLI helps with getting started
+
+## Firebase w/ Sara Robinson
+- real time database
+- noSQL data store
+- can use it as an API
+- intermittent offline
+  - data is stored locally and then updated when you re-gain connectivity
+  - data is inserted based on time it was recorded (using .push())
+- authentication
+  - easy to use with popular methods
+  - $firebaseAuth allows you to authenticate with client-side code only
+- security
+  - json model supporting authenticated
+- cross-platform (JS, iOS, Android)
+- Bindings for popular JS frameworks
+  - Angular Fire
+
+## Foundation with Jeanie Chung
+- Foundation is a frontend framework for sites, apps (responsive web apps) and soon to be emails
+- uses SASS for CSS
+- features
+  - flexbox-powered grid
+  - independently scrolling panels
+  - collapsing panels
+  - can write front-matter at top of page and have Foundation compile it into the AngularJS for routes, animations, etc
+  - Motion UI - transitions and other animations for the apps
+  - Modular Components
+    - so you can use features from one framework in another (eventually)
+    - Off Canvas Menu
+    - In App Notifications
+  
+## Creating D3 components with Angular w/ Aysegul Yonet
+- components = controllers + scopes + directives
+- D3 is for data visualizations and DOM manipulations
+- but they're hard to reuse
+- D3 components help this
+- watch out for:
+  - D3 login should be in a directive
+  - use HTML declarative syntax and attributes to feed data to directives
+  - store data in controller
+  - create NG filters using D3 methods
+- directive should have a linking function to link D3 code
+- enter/exit is one of the most confusing aspects
+  - any time you have new data, you enter and add it
+  - any time you have less data, you exit & remove
+- D3 has methods for getting data but they don't work with Angular
+  - use Angular methods unless they come from CSV (which d3 handles)
+- d3 has methods for manipulating data into format that you want
+  - you can add attribute to HTML for accessor and then create a function that manipulates the data
+### NG2
+- typescript
+  - typing can help make sure data is in correct format for graphs
+  - resources
+    - learnxinyminutes
+- NG2
+  - must bootstrap the entry point to app
+
+## A Token walks into a SPA
