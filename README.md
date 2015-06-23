@@ -260,3 +260,22 @@ These are my notes for the AngularU 2015 conference.
   - separated concerns
 - keep doing what you're doing for now....
   - this may be coming some day....
+
+
+## Tuesday
+### TypeScript
+- superset of JS
+- Modern Type System
+  - type inference
+  - gradual/optional typing
+  - configurable typing
+    - turn off using the `any` type
+- four main principles
+  1. future ready
+  2. flexible development
+    1. you can use typing with any sort of lang (es5, es6, etc)
+  2. Tooling
+  3. Dependency Injection
+- will still compile even if TS detects errors
+- types only there for dev time; stripped out for run time
+- allows tooling to look at types and within classes
