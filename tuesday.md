@@ -1,5 +1,5 @@
-## Tuesday
-### TypeScript
+# Tuesday
+## TypeScript
 - superset of JS
 - Modern Type System
   - type inference
@@ -17,8 +17,8 @@
 - allows tooling to look at types and within classes
 - you can specifiy your type of modules so that when you export things types are caught and TypeScript writes some of your boilerplate code
 
-### Server-side rendering
-#### Jeff Whelpley
+## Server-side rendering
+### Jeff Whelpley
 - benefits:
   - can help with the initial page load
   - SEO
@@ -35,10 +35,21 @@
   2. install the NG2 server plugin
 - user events while the client-side app is downloading in the background...
   - preboot library helps this
-    - it records the user interaction and then plays it back once the SPA loads up
-#### Patrick Stapleton
+    - it records the user interaction and then plays it back once the SPA loads up  
+### Patrick Stapleton
 - server delivers the page so it shows up immediately
 - client side JS is loading in background
 - if user tries to do anything, they get a spinner to tell them to wait
 
-### Crazy Fast Prototyping with Lucas Rubelke
+## Crazy Fast Prototyping with Lukas Ruebbelke
+- how do we know where/how/why users want something?
+- know faster with prototyping
+  - use intuition but then test so that you "know"
+- home team / away team
+  - home team works on the app
+  - away team will demo the app in public and ask for feedback
+  - home team then fixes the app based on the input so that away team can re-test
+  - iterations can even happen in the same day
+https://github.com/jacobscarter/angular-crazy-fast-prototyping/tree/Phase1
+- Ionic is good for fast prototypes
+  - CLI helps with getting started
