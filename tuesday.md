@@ -110,4 +110,30 @@ https://github.com/jacobscarter/angular-crazy-fast-prototyping/tree/Phase1
 - NG2
   - must bootstrap the entry point to app
 
-## A Token walks into a SPA
+## A Token walks into a SPA w/ Martin Gontovnikas
+### currently
+1. browser posts to server
+2. server creates user session
+3. returns a logged in cookie to the browser
+4. browser auto sends auth cookie back to server
+5. check the session based on the cookie & authenticate the user
+6. server responds to browser
+
+- cookies don't play well with CORS
+- cookies require stateful servers
+  - to store the sessions
+- APIs should be stateless
+- Cookies don't flow
+  - user info might flow from one server to another or amongst a pool of servers but cookies don't work well
+
+### JSON Web Tokens
+1. browser posts to server
+2. server creates a JWT with a secret
+  3. nothing saved on server
+4. returns JWT to the browser
+5. Browser sends the JWT on the authorization header
+6. Server checks the JWT signature using the secret
+7. Server sends the response to the client
+- JWT protocol was recently defined
+
+https://auth0.com/events/angularu-single-page-app-authentication
