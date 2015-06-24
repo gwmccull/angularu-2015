@@ -137,3 +137,54 @@ https://github.com/jacobscarter/angular-crazy-fast-prototyping/tree/Phase1
 - JWT protocol was recently defined
 
 https://auth0.com/events/angularu-single-page-app-authentication
+
+## Design + Performance with Steve Souders
+- need to bring designers & devs closer together to work on Design & Performance
+  - in many cases both want to deliver good experience to users
+- designers and devs often work in silos
+- some designs are hard to make fast
+
+- how to fix
+  - small interdisciplinary teams
+    - work together & colocated - product owners, designers, devs, etc.
+  - guiding principles
+    - example: speed is more important than design embellishment
+      - might even set performance goals
+  - prototype early
+  - measure performance from the start
+    - but don't try to prematurely optimize
+    - know where the challenge areas are
+    - surface the performance metrics for everyone to see and a baseline for what is acceptable
+      - widget that shows up on page for devs
+    - show what's beaconed (what data is gathered)
+      - use bookmarklets
+- Metrics
+  - don't use window.onload or document.ready
+    - doesn't accurately measure performance any more with SPAs and API calls
+  - [webpagetest.org](www.webpagetest.org)
+
+- Design paradigms
+  - hero images can take a long time to download
+    - but JS & CSS can be a bigger problem because they'll block your hero image
+  - JS and CSS are big blockers for speed
+    - browser will load JS & CSS with higher priority and block rendering thread.  even if they're at the bottom of the page
+    - mark them async so that browser knows they can downloaded later
+    - browser has to unzip and parse the JS
+- solution
+  - inline the important styles and async load the unimportant styles
+  - sync download the important js and async download the unimportant js
+- custom metrics
+  - define the most important elements on the page
+  - measure when those important elements are rederered to user using User Timing
+  - track with RUM and synthetic
+  - track image performance (for example, for a hero image) by tracking image.onload and by putting a script tag after the image tag (performance.now()) and then take the max
+- takeaways
+  - identify what matters most
+  - focus on UX performance
+  - track most important things for user
+http://www.stevesouders.com/talks.php
+
+- can get the hero image in front of user faster by putting it in a img tag and then putting it in front of JS/CSS
+- custom fonts can be blockers too
+  - may have a fall back font that the app switches to if the font is taking too long
+  - you have to decide if it's so important that the user not see unstyled fonts
