@@ -188,3 +188,69 @@ http://www.stevesouders.com/talks.php
 - custom fonts can be blockers too
   - may have a fall back font that the app switches to if the font is taking too long
   - you have to decide if it's so important that the user not see unstyled fonts
+
+## Community Night with Dan Wahlin and Brad Green
+Martin Fowler - Developer Patterns
+Robert Barton
+
+### Getting Started with NG2 w/ Dan Wahlin
+tinyurl.com/Angular2JumpStart
+#### Intro
+- NG2 is more consistent
+- ng binds directly to DOM events
+- ng 1.x
+  - actively developed
+  - continued support
+- ng 2
+  - dev preview 
+  - TypeScript, ES5 or ES6
+- Ng2 overview
+  - more modular
+  - DI is more flexible
+  - consistency - easier to tell if it's 1-way or 2-way
+  - speed - Ng2 is much faster and memory efficient
+  - open - may need to read source for documentation
+  - web standards - more forward looking on new standards
+- Ng 2 will have lazy-loading demo soon
+
+#### ES6 / TypeScript
+- Migration path ready in 1 month
+- Babel has best feature support
+  - TypeScript gives typing even if you don't write the types
+  - choose one, it won't hurt migration
+
+#### TypeScript
+- public/private for classes is only for dev environment
+
+#### Modules and Module Loaders
+- use System.js for module loading
+- export classes, functions & variables using `export` keyword
+- import the things that were exported using `import`
+
+#### NG2
+- Bind to DOM property (1-way)
+`<element [property]="variable" />`
+`<element bindon-property="variable" />`
+  - old way was attribute but that was only the initial state of DOM.  New way is DOM properties which is more dynamic
+- Bind to Events
+`<element (event)="code" />`
+`<element on-event="code" />`
+  - you can make custom events also
+- 2-way binding
+`<element [(property)]="variable" />`
+`<element bindon-property="variable" />`
+  expands to
+`<element [property]="variable" (property)="variable" />` 
+- property is often a directive
+
+- Components
+  - view template can use ES6 `template strings` with back ticks
+
+- Built-in Directives
+<element *ng-for="#item of items" />
+- * does the template tags and generates a template
+- # creates a variable.  You can also use a `var`
+- using the DOM properties takes away most of the directives from ng1.x
+
+- Custom Directives
+  - a directive does *not* have a view.  A component *does* have a view
