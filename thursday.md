@@ -22,3 +22,27 @@
 `(num, i) => num * 2` multiple params
 `num => { num * 2; return num + 2 }` multiple lines
 cannot do named arrow functions according to spec (but Babel may name it)
+
+## Objects
+- objects can use function short cuts like a class
+`var obj = { bob(){ .... } }`
+- object shortcut properties
+`var things = {pet: pet} === {pet}`
+- destructing assingments
+`var things = {foods: 1}; var {foods} = things;` same as `var foods = things.foods`
+`function({req: request, res}) { ... }` same as `function(obj) { var request = obj.req; var res = obj.res; }`
+`let [first, second, , fourth] = [1, 2, 3, 4]` same as `let first = [1,2,3,4][0]; let fourth = [1,2,3,4][3]` done by position
+
+## default params
+`(number = 2) => { ... }` if number is undefined, set it to 2.  The default can be a function or a literal or another variable in the outer scope
+
+
+## Math
+`number**2` is exponent
+
+## Rest
+`(arg, ...others) => { console.log(others); }` others would be an array of other arguments
+cannot use defaults on rest param
+
+## Spread
+`(args) => { console.log(...args) }` spread args and apply console.log to each item in array
