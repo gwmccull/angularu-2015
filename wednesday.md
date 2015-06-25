@@ -121,3 +121,71 @@ http://getify.me
 - C header files are a way of manully 
 - `let` variables do *not* hoist within their block!
   - if you try to use it before, it is in a "temporal dead zone" and you'll get a reference error
+
+# `this`
+- responds to run-time conditions rather than author-time conditions without the performance implications
+- not used as often but useful when you need it
+- every function, while executing, has a reference to its current execution context, call `this`
+  - how the function was called decides what `this` is
+- `this` aware functions are functions with a `this` in it
+- 'call site': where a function is called
+- opt into `this` when you want dynamic scopes.  opt into lexical scoping when you want predictable scopes
+- lexical scope is different from `this` scope.  `this.bar` does not refer to `var bar` when they're in the same function
+- 4 rules for how `this` is bound *(memorize these)*:
+  1. default binding
+    1. no other rules apply so use this
+    2. if I'm in strict mode, `this` is undefined
+      1. else, `this` points to global
+  2. implicit binding
+    1. if there's a context object, then `this` points to context object
+  3. explicit binding
+    1. if we use .call() or .apply(), use the object passed as `this`
+    2. hard binding (variation of explicit binding)
+      1. hard bind the `this` to the function so that no matter how it is called so that you get the correct `this`
+      2. `obj.fn.bind(obj)` so that when the function is called later (if it were passed as a callback) then the `this` will be `obj`
+  4. `new` binding
+    1. when you put `new` in front of [virtually any] function call, 
+      1. creates a new, empty object out of thin air
+      2. the new empty object is linked to another object* (going to come back to this in prototype)
+      3. the brand new created object is set as `this` for the function call
+      4. if the function doesn't have a return, it returns the `this`
+  5. ask in order of operations:
+    1. is there a `new`?
+    2. was the function called with `call` or `apply` with an explicit `this`?
+    3. was the function called via a containing/owning object (context)?
+    4. Default: global object
+  6. ES6 adds the Arrow function `=>` which has it's own rule for this (the parent's `this`)
+
+# Closure
+- closure : Closure is when a function "remembers" its lexical scope even when the function is executed outside that lexical scope
+  - functions remember state over time
+- closure is one of the most powerful concepts in programming ever invented
+  - all JS uses closures and closures are being added to other languages
+- closures nest and function could close multiple variables/scopes
+
+# Modules
+- module must have an outer enclosing function that runs at least once
+- module must return a function that maintains a closure over the internal variables
+- ES6
+  - modules are file based.  everything is assummed to be private unless you `export` it
+  - to use it, `import` into your file
+    - `import bar from "foo"` imports the function directly into your namespace 
+    - `import * as foo from "foo"` imports the functions into a namespace
+    - the string at the end is implementation to dependent.  It could be file path (node) or url path (browser)
+      - only requirement is that it is a string literal (not variable)
+
+# Prototypes
+- classes and creating an instance involving copying the stuff from the class into the instance
+- JavaScript doesn't copy things from the parent to the instance
+  - JS links to the prototype
+- JS doesn't allow true polymorphism
+- ES6 wraps prototypes in sugar but doesn't fix the issues
+  - this is why so many people hate ES6 classes because they pretend to be classes but haven't fixed the underlying differences
+
+# Object Oriented
+- classical the parent goes down to child
+- JS goes child to parent
+- should be called "Behavior Delegation" instead of "Inheritance" or "protypal inheritance"
+## OLOO - Objects Linked to Other Objects
+- use Object.create() to link objects to their parents and then add new properties to the object
+  - instead parent-child, prefer peer-peer delegation
