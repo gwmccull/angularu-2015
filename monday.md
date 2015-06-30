@@ -71,15 +71,15 @@
 #### Angular 2
 - [DOM property]
   - `<div [hidden]="isAvailable">asdf</div>`
-  - <div bind-hidden="isAvailable">
+  - `<div bind-hidden="isAvailable">`
 - (event)
-  - <div (click)="sort()">
-  - <div on-click="sort()">
+  - `<div (click)="sort()">`
+  - `<div on-click="sort()">`
 - [(ng-model)] bind to event & property
   - bindon-property="model"
   - two-way data binding - bind to both the property and the update (event) of the property
 - for loop
-  - <tr *ng-for="box in boxes">
+  - `<tr *ng-for="box in boxes">`
 - Components
   - new way to write directives
 
