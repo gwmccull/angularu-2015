@@ -70,7 +70,7 @@
 
 #### Angular 2
 - [DOM property]
-  - <div [hidden]="isAvailable">asdf</di>
+  - `<div [hidden]="isAvailable">asdf</div>`
   - <div bind-hidden="isAvailable">
 - (event)
   - <div (click)="sort()">
@@ -130,7 +130,7 @@
 
 
 ### David East
-- RX library for observables
+- [RX library for observables](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/observable.md)
 
 ### Tomomi Imura
 #### Shadow DOM
